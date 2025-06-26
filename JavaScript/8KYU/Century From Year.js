@@ -22,3 +22,6 @@ function century(year) {
 //   if not even divide we round down, ie 1701 / 100 = 17.01 rounded down 17 add 1 = 18th century
 
 }
+
+// vatson
+const century2 = year => Math.ceil(year/100)
