@@ -12,4 +12,4 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 
 
 // eb110
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => mpg * fuelLeft >= distanceToPump;
+const zeroFuel2 = (distanceToPump, mpg, fuelLeft) => mpg * fuelLeft >= distanceToPump;
