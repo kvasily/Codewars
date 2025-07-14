@@ -21,9 +21,24 @@ expressionsMatter(1, 1, 1) ==> 3, because 1 + 1 + 1 = 3.
 expressionsMatter(9, 1, 1) ==> 18, because 9 * (1 + 1) = 18.
 */
 
+#include <vector>
+#include <algorithm>
 
 unsigned short int expressionsMatter (unsigned short int a , unsigned short int b , unsigned short int c)
 {
-    // Your Code is Here .. Enjoy !!
-    return 1 ; 
+    std::vector<int> results;
+
+    results.push_back(a + b + c);
+    results.push_back(a * b * c);
+    results.push_back(a * b + c);
+    results.push_back(a + b * c);
+    results.push_back((a + b) * c);
+    results.push_back(a * (b + c));
+
+    return *std::max_element(results.begin(), results.end());
+}
+
+// Unnamed
+unsigned short expressionsMatter1(unsigned short a, unsigned short b, unsigned short c) {
+  return std::max({a + b + c, a * (b + c), (a + b) * c, a * b * c});
 }
